@@ -36,8 +36,14 @@ app.get('/', (request, response) => {
     pageTitle: 'Home Page',
     welcomeMessage: 'Welcome b'
   });
-
 });
+
+app.get('/projects', (request, response) => {
+  response.render('projects.hbs', {
+    pageTitle: 'Projects Page'
+  });
+});
+
 
 app.get('/about', (request, response) => {
   response.render('about.hbs', {
